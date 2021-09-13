@@ -1,1 +1,1 @@
-## Readable Code Practice
+## Readable Code Practice in TMU CS2
