@@ -6,6 +6,7 @@ int main() {
     FILE *fp;
     char data[BUFFER_SIZE];
     char scanword[BUFFER_SIZE];
+    //ここでファイルの入力をしていない
     if ((fp = fopen(data, "r")) == NULL) {
         printf("ファイルオープン失敗\n");
     } else {
