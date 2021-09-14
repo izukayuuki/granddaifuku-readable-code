@@ -6,12 +6,14 @@ int main() {
     FILE *fp;
     char data[BUFFER_SIZE];
     char scanword[BUFFER_SIZE];
-    scanf("ファイル名：%s", data);
+    printf("ファイル名：");
+    scanf("%s", data);
     if ((fp = fopen(data, "r")) == NULL) {
         printf("ファイルオープン失敗\n");
     } else {
-        fscanf(fp, "%s", scanword);
-        printf("%s\n", scanword);
+        while (fscanf(fp, "%s", scanword) != EOF) {
+            printf("%s\n", scanword);
+        }
     }
     fclose(fp);
     
