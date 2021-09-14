@@ -10,7 +10,7 @@ int main(int argc, char* argv[]) {
     int ID = 1;
     char searchID[BUFFER_SIZE];
     int convertID;
-    
+
     printf("ファイル名：");
     scanf("%s", data);
     fgets(searchID, BUFFER_SIZE, stdin);
@@ -20,13 +20,13 @@ int main(int argc, char* argv[]) {
     } else {
         if (convertID == 0) {
             while (fscanf(fp, "%s", scanword) != EOF) {
-            printf("%d: %s\n", ID, scanword);
-            ID++;
+                printf("%d: %s\n", ID, scanword);
+                ID++;
             }
         } else {
             while (fscanf(fp, "%s", scanword) != EOF) {
-                if(ID == convertID){
-                printf("%d: %s\n", ID, scanword);
+                if (ID == convertID){
+                    printf("%d: %s\n", ID, scanword);
                 }
                 ID++;
             }
