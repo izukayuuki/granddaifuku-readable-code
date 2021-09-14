@@ -7,14 +7,16 @@ int main(int argc, char* argv[]) {
     FILE *fp;
     char data[BUFFER_SIZE];
     char scanword[BUFFER_SIZE];
+    
     int ID = 1;
     char searchID[BUFFER_SIZE];
     int convertID;
 
-    printf("ファイル名：");
+    printf("ファイル名 ID番号の形式で入力してください：");
     scanf("%s", data);
     fgets(searchID, BUFFER_SIZE, stdin);
     convertID = atoi(searchID);
+    
     if ((fp = fopen(data, "r")) == NULL) {
         printf("ファイルオープン失敗\n");
     } else {
